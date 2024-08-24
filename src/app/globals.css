@@ -2,32 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.gradient-button {
+	border-radius: 12px;
+	background: var(--gr, linear-gradient(85deg, #6495ed 4.62%, #de3163 91.89%));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.search-input {
+	border-radius: 16px;
+	background: rgba(194, 199, 208, 0.4);
+
+	/* Nav drop */
+	box-shadow: 0px 169px 47px 0px rgba(131, 166, 236, 0),
+		0px 108px 43px 0px rgba(131, 166, 236, 0.01),
+		0px 61px 37px 0px rgba(131, 166, 236, 0.05),
+		0px 27px 27px 0px rgba(131, 166, 236, 0.09),
+		0px 7px 15px 0px rgba(131, 166, 236, 0.1);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.accordion-container {
+	border-radius: 20px;
+	border: 1px solid var(--ggg, #6495ed);
+	background: linear-gradient(
+		157deg,
+		rgba(215, 234, 245, 0.14) 11.74%,
+		rgba(165, 223, 255, 0) 165.82%
+	);
+	box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(2px);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.accordion-title {
+	background: var(--ggg, linear-gradient(85deg, #6495ed 4.62%, #de3163 91.89%));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 0em;
+	background: #fff;
+}
+
+::-webkit-scrollbar-track {
+	background: #fff;
+	margin-block: 1em;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #333;
+	border-radius: 100vw;
 }
