@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Projects",
+		"links": [
+			{ "text": "What is a Project?", "href": "#project-what-is" },
+			{ "text": "Creating a New Project", "href": "#project-creating" },
+			{
+				"text": "Naming your projects and Select View Modes",
+				"href": "#project-naming"
+			},
+			{ "text": "Simple project Operations", "href": "#project-operations" },
+			{ "text": "Adding members to a project", "href": "#project-members" },
+			{ "text": "Archiving a project", "href": "#project-archiving" },
+			{ "text": "Viewing Archived Projects", "href": "#project-viewing" },
+			{ "text": "Leaving & Deleting a Project", "href": "#project-leaving" },
+			{ "text": "Deleting a Project", "href": "#project-deleting" }
+		]
+	},
+	{
+		"name": "Workspace",
+		"links": [
+			{ "text": "What is a Workspace?", "href": "#workspace-what-is" },
+			{ "text": "Creating a New Workspace", "href": "#workspace-creating" }
+		]
+	},
+	{
+		"name": "Task Priority",
+		"links": [
+			{
+				"text": "Understanding Task Priority",
+				"href": "#task-priority-understanding"
+			},
+			{ "text": "Setting Task Priority", "href": "#task-priority-setting" }
+		]
+	},
+	{
+		"name": "Files",
+		"links": [
+			{ "text": "Managing Files", "href": "#files-managing" },
+			{ "text": "Uploading Files", "href": "#files-uploading" }
+		]
+	}
+]

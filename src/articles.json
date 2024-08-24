@@ -1,0 +1,56 @@
+[
+	{
+		"id": "#project-what-is",
+		"title": "What is a Project?",
+		"desc1": "In Acedboard, a project is the second level in the organizational unit. A project is a group of tasks and or people working together for a specific goal, outcome within a set time. Each person has their own role or collaborates on shared tasks to achieve success. Projects can be of any size or complexity, from building a small tree-house to large-scale construction initiatives spanning years.",
+		"desc2": "Once you have created your first workspace you can find projects in the left side of your screen, click the three dots beside the project icon to view more options.",
+		"src1": "/image1.png",
+		"alt1": "image1"
+	},
+	{
+		"id": "#project-creating",
+		"title": "Creating a New Project",
+		"desc1": "Once you have selected the three dots, select the new project option to get started.",
+		"src1": "/image1.png",
+		"alt1": "image1"
+	},
+	{
+		"id": "#project-naming",
+		"title": "Naming your projects and Select View Modes?",
+		"desc1": "After choosing the 'New Project' option, proceed to define the project name. Optionally, you can provide additional details by inputting a description for more context.",
+		"src1": "/image2.png",
+		"alt1": "image2",
+		"desc3": "On inputting the project name and description, you can go on to select your desired view from the array of view modes available to see different details of your project. You need to select at least one view to proceed.",
+		"desc4": "After creating a project, you have the flexibility to build a well-organized structure by adding tasks, folders, groups, subgroups, to-do lists, and other smaller units to enhance the overall organization and structure of your project.",
+		"src2": "/image2.png",
+		"alt2": "img2"
+	},
+	{
+		"id": "#project-operations",
+		"title": "Simple project Operations",
+		"desc1": "You have the flexibility to execute basic actions such as renaming your project, copying the project link for easy sharing with team members or relevant parties who may not be directly involved in the project.",
+		"src1": "/image2.png",
+		"alt1": "image1"
+	},
+	{
+		"id": "#project-members",
+		"title": "Adding members to a project",
+		"desc1": "To add members to your projects, click on the three dots next to the project name and select 'Add People.' Choose individuals from the list within your workspace to include them in the project.",
+		"imgRow": true,
+		"src1": "/image3.png",
+		"alt1": "image1",
+		"src2": "/image3.png",
+		"alt2": "image2"
+	},
+	{
+		"id": "#project-archiving",
+		"title": "Archiving a project",
+		"desc1": "After successfully finishing your project, you have the option to archive closed projects for record-keeping or store them securely in the cloud for future reference. This helps in organizing your workspace by prioritizing projects that require immediate attention while keeping a neat and accessible record of completed endeavors.",
+		"desc2": "To archive a project, select the 3 dots beside the project name and then select the archive icon.",
+		"imgRow": true,
+		"src1": "/image3.png",
+		"alt1": "image1",
+		"src2": "/image3.png",
+		"alt2": "image2"
+	}
+]
