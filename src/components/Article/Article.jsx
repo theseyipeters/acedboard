@@ -37,7 +37,7 @@ export default function Article({
 					/>
 				</div>
 			) : imgRow ? (
-				<div className="w-full mt-8 flex flex-row gap-10">
+				<div className="w-full mt-8 flex flex-row gap-3 lg:gap-10">
 					<Image
 						width={1100}
 						height={400}
