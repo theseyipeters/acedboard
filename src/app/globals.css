@@ -33,12 +33,23 @@
 	backdrop-filter: blur(2px);
 }
 
-.accordion-title {
+.text-gradient {
 	background: var(--ggg, linear-gradient(85deg, #6495ed 4.62%, #de3163 91.89%));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+/* .footer-blur {
+	border-radius: 329px 446px 329px 419px;
+	opacity: 0.13;
+	background: url(/public/footerBlur.svg) lightgray 0px 17.85px / 90.442%
+		107.579% no-repeat;
+	filter: blur(200px);
+	width: 1611px;
+	height: 1075px;
+	flex-shrink: 0;
+} */
 
 ::-webkit-scrollbar {
 	width: 0em;
