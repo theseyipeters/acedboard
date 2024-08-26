@@ -7,12 +7,14 @@ import SearchInput from "@/components/common/SearchInput/SearchInput";
 import MenuAccordion from "@/components/MenuAccordion/MenuAccordion";
 import Article from "@/components/Article/Article";
 import articles from "../articles.json";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { scrollToElement } from "@/utils/helpers";
 import Footer from "@/components/Footer/Footer";
+import MenuIcon from "@/svgs/MenuIcon";
 
 export default function Home() {
 	const containerRef = useRef(null);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const handleLinkClick = (id) => {
 		const element = document.getElementById(id);
@@ -25,11 +27,27 @@ export default function Home() {
 			);
 		}
 	};
+
+	const toggleMenu = () => {
+		console.log("Toggled");
+		setIsMenuOpen(!isMenuOpen);
+	};
 	return (
 		<div className="bg-black h-[1200px]">
 			<div className="w-full fixed top-0 bg-white z-50">
 				<Navbar />
 			</div>
+
+			{isMenuOpen && (
+				<div className="fixed inset-0 bg-black bg-opacity-50 z-[1000] flex">
+					<div className="bg-white w-[350px] h-full p-4">
+						<MenuAccordion onLinkClick={handleLinkClick} />
+					</div>
+					<div
+						className="flex-1"
+						onClick={() => setIsMenuOpen(false)}></div>
+				</div>
+			)}
 
 			<div className="mt-[100px] relative bg-white h-full w-full">
 				<div className="fixed w-full mt-4">
@@ -53,10 +71,18 @@ export default function Home() {
 						<div className="flex w-full md:w-fit">
 							<SearchInput placeholder={"Find in templates"} />
 						</div>
+						<div className="md:hidden mt-4 md:mt-10 flex flex-row items-center gap-3">
+							<div
+								onClick={toggleMenu}
+								className="h-6 w-6">
+								<MenuIcon className="text-gray-700" />
+							</div>
+							<p>Articles in this section</p>
+						</div>
 					</div>
 				</div>
 
-				<div className="bg-white overflow-y-scroll fixed top-[450px] md:top-[420px] lg:top-[350px] bottom-0 w-full flex flex-col">
+				<div className="bg-white overflow-y-scroll fixed top-[470px] md:top-[420px] lg:top-[350px] bottom-0 w-full flex flex-col">
 					<div className="pb-[40px]">
 						<div className=" flex flex-row gap-[50px] px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
 							<div className="hidden md:flex flex-[2] lg:flex-[1.5] xl:flex-[1.5] w-full h-fit pt-[20px] py-[50px]">

@@ -86,7 +86,9 @@ export default function Footer() {
 
 			<div className="w-full flex flex-col-reverse lg:flex-row gap-20 items-center justify-between mt-10">
 				<div className="w-full lg:w-[35%] flex flex-col gap-5">
-					<h4 className="text-2xl w-4/5">Subscribe to our newsletter</h4>
+					<h4 className="text-2xl w-full lg:w-[75%]">
+						Subscribe to our newsletter
+					</h4>
 
 					<form className="flex w-full relative">
 						<input

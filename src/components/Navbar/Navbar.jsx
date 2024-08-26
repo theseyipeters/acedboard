@@ -4,6 +4,7 @@ import ArrowDown from "@/svgs/ArrowDown";
 import Link from "next/link";
 import React from "react";
 import GradientButton from "../common/GradientButton/GradientButton";
+import MenuIcon from "@/svgs/MenuIcon";
 
 const navItems = [
 	{ label: "Features", link: "/features", hasDropdown: true },
@@ -20,21 +21,29 @@ export default function Navbar() {
 			<div className="w-full flex items-center justify-between">
 				<AcedboardLogo />
 
-				<ul className="hidden font-light lg:flex items-center gap-6">
+				<ul className="hidden font-light lg:flex items-center lg:gap-4 xl:gap-6">
 					{navItems.map((item, index) => (
 						<li
 							className="flex items-center gap-[6px]"
 							key={index}>
-							<Link href={item.link}>{item.label}</Link>
+							<Link
+								className="tet-base lg:text-sm"
+								href={item.link}>
+								{item.label}
+							</Link>
 							{item.hasDropdown && <ArrowDown />}
 						</li>
 					))}
 				</ul>
 
-				<div className="flex flex-row items-center gap-6">
+				<div className="hidden  lg:flex flex-row items-center gap-6">
 					<Link href="/sign-in">Sign in</Link>
 
 					<GradientButton>Start for free</GradientButton>
+				</div>
+
+				<div className="h-6 w-6 block lg:hidden">
+					<MenuIcon />
 				</div>
 			</div>
 		</nav>
