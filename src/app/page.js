@@ -2,7 +2,7 @@
 
 import BreadCrumb from "@/components/common/Breadcrumb/BreadCrumb";
 import Navbar from "@/components/Navbar/Navbar";
-import { manrope } from "./layout";
+import { manrope, montserrat } from "./layout";
 import SearchInput from "@/components/common/SearchInput/SearchInput";
 import MenuAccordion from "@/components/MenuAccordion/MenuAccordion";
 import Article from "@/components/Article/Article";
@@ -38,24 +38,25 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="flex fixed w-full">
+				<div className={`flex fixed w-full ${montserrat.style}`}>
 					<div className="absolute top-0 w-full mt-[80px] flex flex-col gap-4 lg:flex-row items-start lg:items-center justify-between px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
 						<div className="w-fit">
-							<h1 className="text-4xl capitalize font-semibold">
-								How can we help you today?
+							<h1 className="text-3xl lg:text-4xl capitalize font-semibold">
+								How can we <span className="text-gradient">help you</span>{" "}
+								today?
 							</h1>
-							<p className="text-lg text-gray-500 mt-4">
+							<p className="text-base md:text-lg text-gray-500 mt-4">
 								Lorem Ipsum is simply dummy text of the printing
 							</p>
 						</div>
 
-						<div className="flex w-fit">
+						<div className="flex w-full md:w-fit">
 							<SearchInput placeholder={"Find in templates"} />
 						</div>
 					</div>
 				</div>
 
-				<div className="bg-white overflow-y-scroll fixed top-[390px] md:top-[380px] lg:top-[300px] bottom-0 w-full flex flex-col">
+				<div className="bg-white overflow-y-scroll fixed top-[450px] md:top-[420px] lg:top-[350px] bottom-0 w-full flex flex-col">
 					<div className="pb-[40px]">
 						<div className=" flex flex-row gap-[50px] px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
 							<div className="hidden md:flex flex-[2] lg:flex-[1.5] xl:flex-[1.5] w-full h-fit pt-[20px] py-[50px]">

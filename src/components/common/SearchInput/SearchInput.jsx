@@ -3,7 +3,7 @@ import GradientButton from "../GradientButton/GradientButton";
 
 export default function SearchInput({ placeholder }) {
 	return (
-		<div className="w-[500px] search-input p-2">
+		<div className="w-full md:w-[500px] search-input p-2">
 			<div className="rounded-[14px] bg-white p-1 relative h-[60px]">
 				<input
 					className="w-4/5 h-full px-5 placeholder:text-gray-600 focus:outline-none"

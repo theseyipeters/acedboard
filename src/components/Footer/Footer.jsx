@@ -75,17 +75,17 @@ export default function Footer() {
 					className="object-cover"
 				/>
 			</div>
-			<div className="mt-[40px] w-full flex flex-row gap-4 items-center justify-between">
+			<div className="mt-[60px] w-full flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
 				<AcedboardLogo />
 
-				<div className="flex items-center flex-row gap-4">
+				<div className="w-full md:w-fit flex items-center justify-between flex-row gap-4">
 					<p className={`text-xl font-light`}>Ready to get started?</p>
 					<GradientButton>Start for free</GradientButton>
 				</div>
 			</div>
 
-			<div className="w-full flex flex-row gap-20 items-center justify-between mt-10">
-				<div className="w-[35%] flex flex-col gap-5">
+			<div className="w-full flex flex-col-reverse lg:flex-row gap-20 items-center justify-between mt-10">
+				<div className="w-full lg:w-[35%] flex flex-col gap-5">
 					<h4 className="text-2xl w-4/5">Subscribe to our newsletter</h4>
 
 					<form className="flex w-full relative">
@@ -112,11 +112,11 @@ export default function Footer() {
 						</div>
 					</form>
 				</div>
-				<div className="w-full  flex flex-row gap-10 items-start justify-between">
+				<div className="w-full lg:w-[65%]  grid grid-cols-2 md:grid-cols-4 gap-10 items-start justify-between">
 					{footerLinks.map((item, index) => (
 						<div
 							key={index}
-							className="w-[200px]">
+							className="">
 							<h2 className="text-gradient">{item.label}</h2>
 
 							<div className="flex flex-col gap-5 mt-5">
@@ -134,7 +134,7 @@ export default function Footer() {
 				</div>
 			</div>
 
-			<div className="mt-[62px] w-full flex flex-row items-center justify-between">
+			<div className="mt-[62px] w-full flex flex-col lg:flex-row gap-10 items-center justify-between">
 				<div className="font-light flex flex-row gap-[50px] items-center">
 					<p>All Rights Reserved © acedboard 2024</p>
 					<div className="flex flex-row gap-2">
@@ -144,7 +144,7 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="flex flex-row gap-10">
+				<div className="flex flex-row lg: gap-8 xl:gap-10">
 					{socials.map((item, index) => (
 						<Link
 							key={index}
