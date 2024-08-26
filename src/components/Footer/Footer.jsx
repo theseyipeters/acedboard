@@ -114,7 +114,9 @@ export default function Footer() {
 				</div>
 				<div className="w-full  flex flex-row gap-10 items-start justify-between">
 					{footerLinks.map((item, index) => (
-						<div className="w-[200px]">
+						<div
+							key={index}
+							className="w-[200px]">
 							<h2 className="text-gradient">{item.label}</h2>
 
 							<div className="flex flex-col gap-5 mt-5">
@@ -142,10 +144,11 @@ export default function Footer() {
 				</div>
 
 				<div className="flex flex-row gap-10">
-					{socials.map((item) => (
-						<Link href={item.link}>
-							{" "}
-							<item.icon />{" "}
+					{socials.map((item, index) => (
+						<Link
+							key={index}
+							href={item.link}>
+							<item.icon />
 						</Link>
 					))}
 				</div>
