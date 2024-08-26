@@ -122,6 +122,7 @@ export default function Footer() {
 							<div className="flex flex-col gap-5 mt-5">
 								{item.items.map((item, index) => (
 									<Link
+										key={index}
 										className="font-light"
 										href={"/"}>
 										{item.label}
