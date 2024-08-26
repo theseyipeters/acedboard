@@ -3,6 +3,10 @@ import React from "react";
 import blur from "@/assets/footerBlur.svg";
 import AcedboardLogo from "@/svgs/AcedboardLogo";
 import GradientButton from "../common/GradientButton/GradientButton";
+import Facebook from "@/svgs/Facebook";
+import LinkedIn from "@/svgs/LinkedIn";
+import Youtube from "@/svgs/Youtube";
+import X from "@/svgs/X";
 import { montserrat } from "@/app/layout";
 import Link from "next/link";
 
@@ -11,44 +15,58 @@ const footerLinks = [
 		label: "Platform",
 		items: [
 			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
+			{ label: "Automation", link: "/" },
+			{ label: "Integration", link: "/" },
+			{ label: "Security", link: "/" },
+			{ label: "Proconomics", link: "/" },
 		],
 	},
 	{
-		label: "Platform",
+		label: "Features",
 		items: [
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
+			{ label: "List", link: "/" },
+			{ label: "Board", link: "/" },
+			{ label: "Workload", link: "/" },
+			{ label: "Calendar", link: "/" },
+			{ label: "Teams", link: "/" },
+			{ label: "Files", link: "/" },
 		],
 	},
 	{
-		label: "Platform",
+		label: "Company",
 		items: [
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
+			{ label: "About us", link: "/" },
+			{ label: "Brand", link: "/" },
+			{ label: "Blogs", link: "/" },
+			{ label: "Careers", link: "/" },
+			{ label: "Events", link: "/" },
+			{ label: "Contact Us", link: "/" },
 		],
 	},
 	{
-		label: "Platform",
+		label: "Resources",
 		items: [
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
-			{ label: "Project Management", link: "/" },
+			{ label: "Guides", link: "/" },
+			{ label: "FAQs", link: "/" },
+			{ label: "Video Library", link: "/" },
+			{ label: "24/7 Support", link: "/" },
+			{ label: "Pricing", link: "/" },
+			{ label: "Community", link: "/" },
 		],
 	},
 ];
 
+const socials = [
+	{ icon: Facebook, link: "/" },
+	{ icon: Youtube, link: "/" },
+	{ icon: LinkedIn, link: "/" },
+	{ icon: X, link: "/" },
+];
+
 export default function Footer() {
 	return (
-		<footer className="h-[500px] bg-white w-full footer relative px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
-			<div className="absolute -top-[450px] left-1/2 -translate-x-1/2 w-4/5 footer-blur">
+		<footer className="h-fit pb-[80px] bg-white w-full footer border px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
+			<div className="absolute top-[0px] left-1/2 -translate-x-1/2 w-4/5 footer-blur">
 				<Image
 					src={blur}
 					alt="blur"
@@ -66,7 +84,7 @@ export default function Footer() {
 				</div>
 			</div>
 
-			<div className="w-full flex flex-row gap-10 items-center justify-between mt-10">
+			<div className="w-full flex flex-row gap-20 items-center justify-between mt-10">
 				<div className="w-[35%] flex flex-col gap-5">
 					<h4 className="text-2xl w-4/5">Subscribe to our newsletter</h4>
 
@@ -74,7 +92,7 @@ export default function Footer() {
 						<input
 							placeholder="Email address"
 							type="email"
-							className="border-b rounded-br-xl h-[55px] w-full px-3 placeholder:text-gray-1/60 placeholder:text-sm"
+							className="border-b bg-transparent focus:outline-none rounded-br-xl h-[55px] w-full px-3 placeholder:text-gray-1/60 placeholder:text-sm"
 						/>
 
 						<div className="absolute right-0 translate-y-0">
@@ -94,22 +112,42 @@ export default function Footer() {
 						</div>
 					</form>
 				</div>
-				<div className="w-full border">
-					<div>
-						<h2 className="text-gradient">Platform</h2>
+				<div className="w-full  flex flex-row gap-10 items-start justify-between">
+					{footerLinks.map((item, index) => (
+						<div className="w-[200px]">
+							<h2 className="text-gradient">{item.label}</h2>
 
-						<div className="flex flex-col gap-5 mt-5">
-							<Link
-								className="text-gradient"
-								href={"/"}>
-								Project Management
-							</Link>
-							<Link href={"/"}>Project Management</Link>
-							<Link href={"/"}>Project Management</Link>
-							<Link href={"/"}>Project Management</Link>
-							<Link href={"/"}>Project Management</Link>
+							<div className="flex flex-col gap-5 mt-5">
+								{item.items.map((item, index) => (
+									<Link
+										className="font-light"
+										href={"/"}>
+										{item.label}
+									</Link>
+								))}
+							</div>
 						</div>
+					))}
+				</div>
+			</div>
+
+			<div className="mt-[62px] w-full flex flex-row items-center justify-between">
+				<div className="font-light flex flex-row gap-[50px] items-center">
+					<p>All Rights Reserved © acedboard 2024</p>
+					<div className="flex flex-row gap-2">
+						<p>Terms of Use</p>
+						<p>|</p>
+						<p>Privacy Policy</p>
 					</div>
+				</div>
+
+				<div className="flex flex-row gap-10">
+					{socials.map((item) => (
+						<Link href={item.link}>
+							{" "}
+							<item.icon />{" "}
+						</Link>
+					))}
 				</div>
 			</div>
 		</footer>

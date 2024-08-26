@@ -121,8 +121,8 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className=" overflow-y-scroll fixed top-[390px] md:top-[380px] lg:top-[300px] bottom-0 w-full flex flex-col">
-					<siv className="z-20">
+				<div className="bg-white overflow-y-scroll fixed top-[390px] md:top-[380px] lg:top-[300px] bottom-0 w-full flex flex-col">
+					<div className="pb-[40px]">
 						<div className=" flex flex-row gap-[50px] px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
 							<div className="hidden md:flex flex-[2] lg:flex-[1.5] xl:flex-[1.5] w-full h-fit pt-[20px] py-[50px]">
 								<MenuAccordion onLinkClick={handleLinkClick} />
@@ -151,8 +151,8 @@ export default function Home() {
 								))}
 							</div>
 						</div>
-					</siv>
-					<div className="w-full z-0">
+					</div>
+					<div className="w-full z-[2000] relative">
 						<Footer />
 					</div>
 				</div>
