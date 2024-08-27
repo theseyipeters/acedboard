@@ -52,5 +52,68 @@
 		"alt1": "image1",
 		"src2": "/image3.png",
 		"alt2": "image2"
+	},
+	{
+		"id": "#project-viewing",
+		"title": "Viewing Archived Projects",
+		"desc1": "To access archived projects, simply go to the left sidebar where your projects are listed. Click on the three dots, and then choose Show Archived to view all archived projects. You can repeat this process to toggle between showing and hiding archived projects.",
+		"imgRow": true,
+		"src1": "/image4.png",
+		"alt1": "image1",
+		"src2": "/image4.png",
+		"alt2": "image2",
+		"src3": "/image4.png",
+		"alt": "image3",
+		"subitems": [
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			},
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			},
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			},
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			},
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			},
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			},
+			{
+				"text": "For your projects, you can also view Tasks: This shows further subdivision of each aspect of the project broken down into smaller segments.",
+				"image": "/image5.png",
+				"alt": "image5"
+			}
+		]
+	},
+	{
+		"id": "#project-leaving",
+		"title": "Leaving & Deleting a Project",
+		"desc1": "Leaving a project: After fulfilling your role in a project, you have the option to leave. Keep in mind that once you leave, access to project files and the ability to make changes will no longer be available, unless you are re-added by an Admin or the project owner.",
+		"src1": "/image1.png",
+		"alt1": "image1"
+	},
+	{
+		"id": "#project-deleting",
+		"title": "Deleting a Project",
+		"desc1": "After successfully completing a project or determining its lack of viability, you have the option to delete it, relocating it to the trash bin. Exercise caution, as once a project is permanently deleted from the trash bin, restoration is not possible.",
+		"src1": "/image1.png",
+		"alt1": "image1"
 	}
 ]

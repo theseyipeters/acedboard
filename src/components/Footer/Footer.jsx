@@ -78,7 +78,7 @@ export default function Footer() {
 			<div className="mt-[60px] w-full flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
 				<AcedboardLogo />
 
-				<div className="w-full md:w-fit flex items-center justify-between flex-row gap-4">
+				<div className="w-full md:w-fit flex flex-col items-start md:items-center mt-3 md:mt-0 justify-between md:flex-row gap-4">
 					<p className={`text-xl font-light`}>Ready to get started?</p>
 					<GradientButton>Start for free</GradientButton>
 				</div>
@@ -137,7 +137,7 @@ export default function Footer() {
 			</div>
 
 			<div className="mt-[62px] w-full flex flex-col lg:flex-row gap-10 items-center justify-between">
-				<div className="font-light flex flex-row gap-[50px] items-center">
+				<div className="font-light flex flex-col md:flex-row gap-[50px] items-center">
 					<p>All Rights Reserved © acedboard 2024</p>
 					<div className="flex flex-row gap-2">
 						<p>Terms of Use</p>

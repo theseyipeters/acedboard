@@ -27,7 +27,7 @@ export default function Navbar() {
 							className="flex items-center gap-[6px]"
 							key={index}>
 							<Link
-								className="tet-base lg:text-sm"
+								className="text-base lg:text-sm"
 								href={item.link}>
 								{item.label}
 							</Link>
