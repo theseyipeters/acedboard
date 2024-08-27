@@ -82,7 +82,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="bg-white overflow-y-scroll fixed top-[400px] md:top-[420px] lg:top-[350px] bottom-0 w-full flex flex-col">
+				<div className="bg-white overflow-y-scroll fixed top-[400px] md:top-[420px] lg:top-[350px] xl:top-[300px] bottom-0 w-full flex flex-col">
 					<div className="pb-[40px]">
 						<div className=" flex flex-row gap-[50px] px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]">
 							<div className="hidden md:flex flex-[2] lg:flex-[1.5] xl:flex-[1.5] w-full h-fit pt-[20px] py-[50px]">

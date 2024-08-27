@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { montserrat } from "@/app/layout";
 import AcedboardLogo from "@/svgs/AcedboardLogo";
 import ArrowDown from "@/svgs/ArrowDown";
@@ -5,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 import GradientButton from "../common/GradientButton/GradientButton";
 import MenuIcon from "@/svgs/MenuIcon";
+import CloseIcon from "@/svgs/CloseIcon";
 
 const navItems = [
 	{ label: "Features", link: "/features", hasDropdown: true },
@@ -15,6 +17,12 @@ const navItems = [
 ];
 
 export default function Navbar() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
 		<nav
 			className={` ${montserrat.className} h-[100px] bg-white fixed w-full flex justify-center items-center px-[20px] md:px-[30px] lg:px-[60px] xl:px-[90px]`}>
@@ -42,10 +50,50 @@ export default function Navbar() {
 					<GradientButton>Start for free</GradientButton>
 				</div>
 
-				<div className="h-6 w-6 block lg:hidden">
+				<div
+					className="h-6 w-6 block lg:hidden"
+					onClick={toggleMenu}>
 					<MenuIcon />
 				</div>
 			</div>
+
+			{isMenuOpen && (
+				<div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex flex-col items-end">
+					<div className="w-3/4 max-w-xs h-full bg-white shadow-lg p-6">
+						<div
+							onClick={toggleMenu}
+							className="flex ml-auto mb-4 w-fit">
+							<CloseIcon />
+						</div>
+						<ul className="flex flex-col gap-4">
+							{navItems.map((item, index) => (
+								<li key={index}>
+									<Link
+										className="text-ase"
+										href={item.link}
+										onClick={toggleMenu}>
+										{item.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+						<div className="flex flex-col items-center w-full mt-10 gap-4">
+							<Link
+								className="text-ase"
+								href="/sign-in"
+								onClick={toggleMenu}>
+								Sign in
+							</Link>
+							<div className="w-full">
+								<GradientButton>Start for free</GradientButton>
+							</div>
+						</div>
+						<div className="fixed bottom-5">
+							<AcedboardLogo />
+						</div>
+					</div>
+				</div>
+			)}
 		</nav>
 	);
 }
