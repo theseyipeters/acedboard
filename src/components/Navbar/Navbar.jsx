@@ -32,7 +32,7 @@ export default function Navbar() {
 				<ul className="hidden font-light lg:flex items-center lg:gap-4 xl:gap-6">
 					{navItems.map((item, index) => (
 						<li
-							className="flex items-center gap-[6px]"
+							className="flex items-center lg:gap-[3px] xl:gap-[6px]"
 							key={index}>
 							<Link
 								className="text-base lg:text-sm"

@@ -105,26 +105,32 @@ export default function Home() {
 
 							<div
 								ref={containerRef}
-								className="flex-[3] lg:flex-[3.5] flex flex-col gap-20 overflow-y-scroll  pt-[20px] py-[50px] h-[1200px]">
-								{filteredArticles.map((article, index) => (
-									<Article
-										key={index}
-										id={article.id}
-										title={article.title}
-										desc1={article.desc1}
-										desc2={article.desc2}
-										desc3={article.desc3}
-										desc4={article.desc4}
-										imgRow={article.imgRow}
-										src1={article.src1}
-										src2={article.src2}
-										src3={article.src3}
-										alt1={article.alt1}
-										alt2={article.alt2}
-										alt3={article.alt3}
-										subitems={article.subitems}
-									/>
-								))}
+								className="flex-[3] lg:flex-[3.5] flex flex-col gap-20 overflow-y-scroll pt-[20px] py-[50px] h-[1200px]">
+								{filteredArticles.length > 0 ? (
+									filteredArticles.map((article, index) => (
+										<Article
+											key={index}
+											id={article.id}
+											title={article.title}
+											desc1={article.desc1}
+											desc2={article.desc2}
+											desc3={article.desc3}
+											desc4={article.desc4}
+											imgRow={article.imgRow}
+											src1={article.src1}
+											src2={article.src2}
+											src3={article.src3}
+											alt1={article.alt1}
+											alt2={article.alt2}
+											alt3={article.alt3}
+											subitems={article.subitems}
+										/>
+									))
+								) : (
+									<p className="text-center text-gray-500 h-[200px] flex items-center justify-center">
+										No matching results
+									</p>
+								)}
 							</div>
 						</div>
 					</div>
