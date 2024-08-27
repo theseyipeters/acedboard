@@ -4,9 +4,9 @@ import React from "react";
 
 export default function BreadCrumb() {
 	return (
-		<div className={`${manrope.className} flex gap-[12px]`}>
+		<div className={`${manrope.className} flex gap-[8px]`}>
 			<Link
-				className="text-lg"
+				className="text-lg text-gray-1/70"
 				href={"/"}>
 				Home
 			</Link>
