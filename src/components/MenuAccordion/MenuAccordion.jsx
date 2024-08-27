@@ -4,8 +4,6 @@ import { manrope } from "@/app/layout";
 import AccordionArrow from "@/svgs/AccordionArrow";
 import React, { useState, useRef, useEffect } from "react";
 import accordionMenu from "../../accordionMenu";
-import { Link } from "react-scroll";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function MenuAccordion({ onLinkClick }) {
 	const [openIndexes, setOpenIndexes] = useState([0]);

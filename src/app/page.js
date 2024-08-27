@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import BreadCrumb from "@/components/common/Breadcrumb/BreadCrumb";
 import Navbar from "@/components/Navbar/Navbar";
 import { manrope, montserrat } from "./layout";
@@ -7,7 +8,6 @@ import SearchInput from "@/components/common/SearchInput/SearchInput";
 import MenuAccordion from "@/components/MenuAccordion/MenuAccordion";
 import Article from "@/components/Article/Article";
 import articles from "../articles.json";
-import { useRef, useState } from "react";
 import { scrollToElement } from "@/utils/helpers";
 import Footer from "@/components/Footer/Footer";
 import MenuIcon from "@/svgs/MenuIcon";
@@ -15,6 +15,8 @@ import MenuIcon from "@/svgs/MenuIcon";
 export default function Home() {
 	const containerRef = useRef(null);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [searchQuery, setSearchQuery] = useState("");
+	const [filteredArticles, setFilteredArticles] = useState(articles);
 
 	const handleLinkClick = (id) => {
 		const element = document.getElementById(id);
@@ -29,9 +31,17 @@ export default function Home() {
 	};
 
 	const toggleMenu = () => {
-		console.log("Toggled");
 		setIsMenuOpen(!isMenuOpen);
 	};
+
+	const handleSearchInput = (e) => {
+		const query = e.target.value.toLowerCase();
+		setSearchQuery(query);
+		setFilteredArticles(
+			articles.filter((article) => article.title.toLowerCase().includes(query))
+		);
+	};
+
 	return (
 		<div className="bg-black h-[1200px]">
 			<div className="w-full fixed top-0 bg-white z-50">
@@ -69,7 +79,11 @@ export default function Home() {
 						</div>
 
 						<div className="hidden md:flex w-full md:w-fit">
-							<SearchInput placeholder={"Find in templates"} />
+							<SearchInput
+								placeholder={"Search article by title"}
+								value={searchQuery}
+								onChange={handleSearchInput}
+							/>
 						</div>
 						<div className="md:hidden mt-4 md:mt-10 flex flex-row items-center gap-3">
 							<div
@@ -92,7 +106,7 @@ export default function Home() {
 							<div
 								ref={containerRef}
 								className="flex-[3] lg:flex-[3.5] flex flex-col gap-20 overflow-y-scroll  pt-[20px] py-[50px] h-[1200px]">
-								{articles.map((article, index) => (
+								{filteredArticles.map((article, index) => (
 									<Article
 										key={index}
 										id={article.id}
